@@ -1,0 +1,57 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateMenuInput {
+  category: String!
+  description: String!
+  isAvailable: Boolean!
+
+  """Menu unique code"""
+  menuId: Int!
+
+  """Name of the menu item"""
+  name: String!
+  price: Float!
+}
+
+type MenuOutput {
+  """Menu_id"""
+  _id: String!
+  category: String!
+  description: String!
+  isAvailable: Boolean!
+
+  """Menu unique code"""
+  menuId: Int!
+
+  """Name of the menu item"""
+  name: String!
+  price: Int!
+}
+
+type Mutation {
+  createMenu(data: CreateMenuInput!): MenuOutput!
+  deleteProduct(id: String!): String!
+  updateMenu(id: String!, input: UpdateMenu!): MenuOutput!
+}
+
+type Query {
+  getAll: [MenuOutput!]!
+  getMenu(id: String!): MenuOutput!
+}
+
+input UpdateMenu {
+  """Menu unique Object Id"""
+  _id: String!
+  category: String!
+  description: String!
+  isAvailable: Boolean!
+
+  """Menu unique code"""
+  menuId: Int!
+
+  """Name of the menu item"""
+  name: String!
+  price: Float!
+}
