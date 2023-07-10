@@ -32,7 +32,7 @@ type MenuOutput {
 
 type Mutation {
   createMenu(data: CreateMenuInput!): MenuOutput!
-  deleteProduct(id: String!): String!
+  deleteMenu(id: String!): String!
   updateMenu(id: String!, input: UpdateMenu!): MenuOutput!
 }
 

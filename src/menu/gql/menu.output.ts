@@ -28,7 +28,9 @@ export class MenuOutput {
   })
   price: number;
 
-  @Field(() => String, {})
+  @Field(() => String, {
+    // enum : ["veg", "non-veg"]
+  })
   category: string;
 
   @Field(() => Boolean, {})

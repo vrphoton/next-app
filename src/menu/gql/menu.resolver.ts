@@ -31,7 +31,7 @@ export class MenuResolver {
   }
 
   @Mutation(() => String)
-  async deleteProduct(@Args('id') id: string) {
+  async deleteMenu(@Args('id') id: string) {
     return this.menuService.remove(id);
   }
 }
