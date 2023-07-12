@@ -53,7 +53,7 @@ export class MenuRepository {
 }
 
 function checkAndSendErrors(error:any) {
-    if (error.name === 'ValidationError') {
+    if (error.name === 'ValidationError' || error.name === 'CastError') {
         let errors = {};
          Object.keys(error.errors).forEach((key) => {
             errors[key] = error.errors[key].message;
