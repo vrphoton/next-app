@@ -48,7 +48,7 @@ describe('MenuController', () => {
 				expect(result).toHaveLength(2);
 				expect(Array.isArray(result)).toBe(true)
 			});	
-			it("Should return the menu by menu ID if its exist in db", () => {
+			it("Should return the menu by menu ID if it is exist in db", () => {
 				const result = controller.findOne(MockData[0]['_id']);
 				expect(menuService.findOne).toHaveBeenCalled();
 				expect(result).toEqual(MockData[0]);
